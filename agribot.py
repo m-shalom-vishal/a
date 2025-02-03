@@ -7,10 +7,18 @@ from nltk.tokenize import word_tokenize
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
-
-
 import nltk
-nltk.download('punkt', download_dir='/path/to/nltk_data')
+import os
+
+# Set the NLTK data path to a writable directory
+nltk_data_path = './nltk_data'
+if not os.path.exists(nltk_data_path):
+    os.makedirs(nltk_data_path)
+
+nltk.download('punkt', download_dir=nltk_data_path)
+
+# Set the NLTK data path so that it's used for tokenization
+nltk.data.path.append(nltk_data_path)
 
 # Google Custom Search API Config
 API_KEY = "AIzaSyBGKiSPD8Aj1TWm1OqE9Cpn0laxzE1n0O0"  # Replace with your API key
