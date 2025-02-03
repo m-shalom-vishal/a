@@ -1,4 +1,4 @@
 nltk
 streamlit
 sumy
-sckit-learn
+scikit-learn
