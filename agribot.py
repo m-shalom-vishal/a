@@ -7,8 +7,8 @@ from nltk.chat.util import Chat, reflections
 nltk.download('punkt')
 
 # Google Custom Search API setup
-API_KEY = 'YOUR_GOOGLE_API_KEY'  # Replace with your Google API key
-CX = 'YOUR_CX'  # Replace with your Custom Search Engine ID
+API_KEY = 'AIzaSyBGKiSPD8Aj1TWm1OqE9Cpn0laxzE1n0O0'  # Replace with your Google API key
+CX = '57e4625115f494176'  # Replace with your Custom Search Engine ID
 
 def google_search(query):
     service = build("customsearch", "v1", developerKey=API_KEY)
