@@ -1,5 +1,7 @@
 import streamlit as st
 import nltk
+pip install altair
+
 from googleapiclient.discovery import build
 from nltk.chat.util import Chat, reflections
 
