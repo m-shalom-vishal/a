@@ -9,16 +9,23 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 import nltk
 import os
+import os
+import json
+import datetime
+import csv
+import nltk
+import ssl
+import streamlit as st
+import random
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
 
-# Set the NLTK data path to a writable directory
-nltk_data_path = './nltk_data'
-if not os.path.exists(nltk_data_path):
-    os.makedirs(nltk_data_path)
+ssl._create_default_https_context = ssl._create_unverified_context
+nltk.data.path.append(os.path.abspath("nltk_data"))
+nltk.download('punkt')
 
-nltk.download('punkt', download_dir=nltk_data_path)
 
-# Set the NLTK data path so that it's used for tokenization
-nltk.data.path.append(nltk_data_path)
+# 
 
 # Google Custom Search API Config
 API_KEY = "AIzaSyBGKiSPD8Aj1TWm1OqE9Cpn0laxzE1n0O0"  # Replace with your API key
