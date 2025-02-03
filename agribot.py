@@ -10,10 +10,7 @@ from sumy.summarizers.lsa import LsaSummarizer
 
 
 import nltk
-
-# Ensure punkt tokenizer is downloaded
-nltk.download('punkt')
-nltk.data.path.append("./nltk_data")  # Ensure correct path
+nltk.download('punkt', download_dir='/path/to/nltk_data')
 
 # Google Custom Search API Config
 API_KEY = "AIzaSyBGKiSPD8Aj1TWm1OqE9Cpn0laxzE1n0O0"  # Replace with your API key
